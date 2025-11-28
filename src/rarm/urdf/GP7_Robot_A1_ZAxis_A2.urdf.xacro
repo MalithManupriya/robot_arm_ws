@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="GP7"
+   xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:arg name="robot_name" default="GP7"/>
+    <xacro:arg name="add_world" default="true"/>
+    <xacro:arg name="base_link" default="base_link"/>
+    <xacro:arg name="base_type" default="g_shape"/>
+    <xacro:arg name="flange_link" default=""/>
+    <xacro:arg name="gripper_type" default="adaptive_gripper"/>
+    <xacro:arg name="prefix" default=""/>
+    <xacro:arg name="use_camera" default="false"/>
+    <xacro:arg name="use_gazebo" default="true"/>
+    <xacro:arg name="use_gripper" default="true"/>
+
+ <xacro:include filename="$(find rarm)/urdf/GP7.urdf.xacro" />
+
+   <xacro:include filename="$(find rarm)/urdf/gazebo_sim_ros2_control.urdf.xacro" />
+ <xacro:load_gazebo_sim_ros2_control_plugin
+   robot_name="$(arg robot_name)"
+   use_gazebo="$(arg use_gazebo)"/>
+  
+<xacro:include filename="$(find rarm)/urdf/GP7_ros2_control.urdf.xacro" />
+    <xacro:GP7_ros2_control
+      prefix="$(arg prefix)"
+      flange_link="$(arg flange_link)"
+      use_gazebo="$(arg use_gazebo)"/>
+
+</robot>

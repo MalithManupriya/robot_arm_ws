@@ -1,0 +1,1 @@
+rclpy;std_msgs;controller_manager;gripper_controllers;gz_ros2_control;python3-numpy;rclcpp;ros_gz;ros_gz_image;ros2_control;ros2_controllers;trajectory_msgs;robot_state_publisher;xacro;rviz2;ros-gz-sim;ros-gz-bridge;launch_ros;gz_ros2_control_demos;ament_lint_auto;ament_lint_common

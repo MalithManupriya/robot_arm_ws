@@ -1,0 +1,110 @@
+[0.008s] Invoking command in '/home/malith/rarm_ws/build/rarm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm -- -j8 -l8
+[0.030s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.168s] -- Found controller_manager: 4.39.2 (/opt/ros/jazzy/share/controller_manager/cmake)
+[0.262s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.268s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.276s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.284s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.329s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.329s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.461s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.801s] -- Found gripper_controllers: 4.34.0 (/opt/ros/jazzy/share/gripper_controllers/cmake)
+[0.823s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[0.824s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.890s] -- Found gz_ros2_control: 1.2.16 (/opt/ros/jazzy/share/gz_ros2_control/cmake)
+[0.894s] -- Found ros_gz: 1.0.16 (/opt/ros/jazzy/share/ros_gz/cmake)
+[0.894s] -- Found ros_gz_bridge: 1.0.16 (/opt/ros/jazzy/share/ros_gz_bridge/cmake)
+[0.899s] -- Looking for gz-msgs10 -- found version 10.3.2
+[0.903s] -- Searching for dependencies of gz-msgs10
+[1.564s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.564s] -- Searching for dependencies of gz-utils2
+[1.565s] -- Looking for gz-math7 -- found version 7.5.2
+[1.565s] -- Searching for dependencies of gz-math7
+[1.565s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.569s] -- Checking for module 'tinyxml2'
+[1.577s] --   Found tinyxml2, version 10.0.0
+[1.599s] -- Looking for gz-transport13 -- found version 13.5.0
+[1.599s] -- Searching for dependencies of gz-transport13
+[3.118s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[3.121s] -- Checking for module 'libzmq >= 4'
+[3.130s] --   Found libzmq, version 4.3.5
+[3.154s] -- Checking for module 'uuid'
+[3.162s] --   Found uuid, version 2.39.3
+[3.181s] -- Looking for gz-utils2 -- found version 2.2.1
+[3.181s] -- Searching for dependencies of gz-utils2
+[3.181s] -- Searching for <gz-utils2> component [cli]
+[3.181s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[3.181s] -- Searching for dependencies of gz-utils2-cli
+[3.182s] -- Looking for gz-msgs10 -- found version 10.3.2
+[3.264s] -- Found ros_gz_image: 1.0.16 (/opt/ros/jazzy/share/ros_gz_image/cmake)
+[3.264s] -- Found ros_gz_sim: 1.0.16 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+[3.266s] -- Found ros2_control: 4.39.2 (/opt/ros/jazzy/share/ros2_control/cmake)
+[3.267s] -- Found ros2_controllers: 4.34.0 (/opt/ros/jazzy/share/ros2_controllers/cmake)
+[3.267s] -- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)
+[3.267s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.331s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.332s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.332s] -- Added test 'lint_cmake' to check CMake code style
+[3.332s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.333s] -- Added test 'xmllint' to check XML markup files
+[3.333s] -- Configuring done (3.3s)
+[3.338s] -- Generating done (0.0s)
+[3.341s] -- Build files have been written to: /home/malith/rarm_ws/build/rarm
+[3.364s] Invoked command in '/home/malith/rarm_ws/build/rarm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm -- -j8 -l8
+[3.370s] Invoking command in '/home/malith/rarm_ws/build/rarm': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm
+[3.375s] -- Install configuration: ""
+[3.376s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes
+[3.376s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L2.STL
+[3.376s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L6.STL
+[3.376s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L1.STL:Zone.Identifier
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L7.STL
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/base_link.STL
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L3.STL
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L5.STL:Zone.Identifier
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L4.STL
+[3.377s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/base_link.STL:Zone.Identifier
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L1.STL
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L2.STL:Zone.Identifier
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L5.STL
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L3.STL:Zone.Identifier
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L4.STL:Zone.Identifier
+[3.378s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L6.STL:Zone.Identifier
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L8.STL
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L7.STL:Zone.Identifier
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L8.STL:Zone.Identifier
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/urdf
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7.urdf.xacro
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/gazebo_sim_ros2_control.urdf.xacro
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7_ros2_control.urdf.xacro
+[3.379s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7_Robot_A1_ZAxis_A2.urdf.xacro
+[3.380s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/launch
+[3.380s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/launch/GP7.gazebo.launch.py
+[3.380s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/launch/load_ros2_controllers.launch.py
+[3.380s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/launch/robot_state_publisher.launch.py
+[3.380s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/rviz
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/rviz/robot_config.rviz
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/worlds
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/worlds/empty.world
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/worlds/pick_and_place_demo.world
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/config
+[3.381s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros_gz_bridge.yaml
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros2_controllers_template.yaml
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros2_controllers.yaml
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/bring_up
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/bring_up/gp7.sh
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/package_run_dependencies/rarm
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/parent_prefix_path/rarm
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/ament_prefix_path.sh
+[3.382s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/ament_prefix_path.dsv
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/path.sh
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/path.dsv
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.bash
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.sh
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.zsh
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.dsv
+[3.383s] -- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/package.dsv
+[3.383s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/packages/rarm
+[3.384s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/cmake/rarmConfig.cmake
+[3.384s] -- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/cmake/rarmConfig-version.cmake
+[3.384s] -- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/package.xml
+[3.384s] Invoked command in '/home/malith/rarm_ws/build/rarm' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm

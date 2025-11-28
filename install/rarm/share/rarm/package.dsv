@@ -1,0 +1,6 @@
+source;share/rarm/hook/cmake_prefix_path.dsv
+source;share/rarm/hook/cmake_prefix_path.sh
+source;share/rarm/local_setup.bash
+source;share/rarm/local_setup.dsv
+source;share/rarm/local_setup.sh
+source;share/rarm/local_setup.zsh

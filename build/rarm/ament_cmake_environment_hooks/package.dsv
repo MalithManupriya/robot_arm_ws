@@ -1,0 +1,4 @@
+source;share/rarm/local_setup.bash
+source;share/rarm/local_setup.dsv
+source;share/rarm/local_setup.sh
+source;share/rarm/local_setup.zsh

@@ -1,0 +1,170 @@
+[0.000000] (-) TimerEvent: {}
+[0.000115] (rarm) JobQueued: {'identifier': 'rarm', 'dependencies': OrderedDict()}
+[0.000138] (rarm) JobStarted: {'identifier': 'rarm'}
+[0.006265] (rarm) JobProgress: {'identifier': 'rarm', 'progress': 'cmake'}
+[0.006322] (rarm) JobProgress: {'identifier': 'rarm', 'progress': 'build'}
+[0.006335] (rarm) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/malith/rarm_ws/build/rarm', '--', '-j8', '-l8'], 'cwd': '/home/malith/rarm_ws/build/rarm', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/malith/rarm_ws/install/rarm/share/:/home/malith/rarm_ws/src:/home/malith/rarm_ws/install/rarm/share/:/home/malith/rarm_ws/src', 'USER': 'malith', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/malith', 'OLDPWD': '/home/malith', 'TERM_PROGRAM_VERSION': '1.106.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-76f9af49-c31d-4c1c-b1e4-b713deac8c83.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'malith', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/19030_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/malith/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/malith/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft/Web Platform Installer/:/mnt/c/Program Files (x86)/Microsoft ASP.NET/ASP.NET Web Pages/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/110/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/110/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/120/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/120/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/120/DTS/Binn/:/mnt/d/Program Files/MATLAB/R2021b/bin:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Malith Manupriya/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Malith Manupriya/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Malith Manupriya/.dotnet/tools:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Ollama:/snap/bin:/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-974068403410da13.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/malith/.vscode-server/data/User/workspaceStorage/6d7952eb95283e2d106b8db0fa986463/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bbaad9328d.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/malith/rarm_ws/build/rarm', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[0.026326] (rarm) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.099439] (-) TimerEvent: {}
+[0.167963] (rarm) StdoutLine: {'line': b'-- Found controller_manager: 4.39.2 (/opt/ros/jazzy/share/controller_manager/cmake)\n'}
+[0.199539] (-) TimerEvent: {}
+[0.299760] (-) TimerEvent: {}
+[0.329428] (rarm) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.347833] (rarm) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.377850] (rarm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.399899] (-) TimerEvent: {}
+[0.404383] (rarm) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.499990] (-) TimerEvent: {}
+[0.513166] (rarm) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.519798] (rarm) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600064] (-) TimerEvent: {}
+[0.613482] (rarm) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[0.700169] (-) TimerEvent: {}
+[0.743457] (rarm) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[0.800279] (-) TimerEvent: {}
+[0.821511] (rarm) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.900391] (-) TimerEvent: {}
+[1.000659] (-) TimerEvent: {}
+[1.100898] (-) TimerEvent: {}
+[1.201101] (-) TimerEvent: {}
+[1.301351] (-) TimerEvent: {}
+[1.401651] (-) TimerEvent: {}
+[1.501924] (-) TimerEvent: {}
+[1.602171] (-) TimerEvent: {}
+[1.681896] (rarm) StdoutLine: {'line': b'-- Found gripper_controllers: 4.34.0 (/opt/ros/jazzy/share/gripper_controllers/cmake)\n'}
+[1.702314] (-) TimerEvent: {}
+[1.765072] (rarm) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.766601] (rarm) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.766735] (rarm) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.802464] (-) TimerEvent: {}
+[1.886483] (rarm) StdoutLine: {'line': b'-- Found gz_ros2_control: 1.2.16 (/opt/ros/jazzy/share/gz_ros2_control/cmake)\n'}
+[1.902575] (-) TimerEvent: {}
+[1.902792] (rarm) StdoutLine: {'line': b'-- Found ros_gz: 1.0.16 (/opt/ros/jazzy/share/ros_gz/cmake)\n'}
+[1.905812] (rarm) StdoutLine: {'line': b'-- Found ros_gz_bridge: 1.0.16 (/opt/ros/jazzy/share/ros_gz_bridge/cmake)\n'}
+[1.951004] (rarm) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[1.968688] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-msgs10\n'}
+[2.002623] (-) TimerEvent: {}
+[2.102863] (-) TimerEvent: {}
+[2.203151] (-) TimerEvent: {}
+[2.303459] (-) TimerEvent: {}
+[2.403747] (-) TimerEvent: {}
+[2.504012] (-) TimerEvent: {}
+[2.604304] (-) TimerEvent: {}
+[2.704587] (-) TimerEvent: {}
+[2.804829] (-) TimerEvent: {}
+[2.905112] (-) TimerEvent: {}
+[2.986730] (rarm) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") \n'}
+[2.990191] (rarm) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[2.990409] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[2.993422] (rarm) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[2.993548] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7\n'}
+[2.993744] (rarm) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[2.998065] (rarm) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[3.005211] (-) TimerEvent: {}
+[3.007572] (rarm) StdoutLine: {'line': b'--   Found tinyxml2, version 10.0.0\n'}
+[3.040191] (rarm) StdoutLine: {'line': b'-- Looking for gz-transport13 -- found version 13.5.0\n'}
+[3.040429] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport13\n'}
+[3.105323] (-) TimerEvent: {}
+[3.205539] (-) TimerEvent: {}
+[3.305786] (-) TimerEvent: {}
+[3.406045] (-) TimerEvent: {}
+[3.506301] (-) TimerEvent: {}
+[3.606576] (-) TimerEvent: {}
+[3.706847] (-) TimerEvent: {}
+[3.807129] (-) TimerEvent: {}
+[3.907376] (-) TimerEvent: {}
+[4.007623] (-) TimerEvent: {}
+[4.107878] (-) TimerEvent: {}
+[4.208084] (-) TimerEvent: {}
+[4.220106] (rarm) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[4.224456] (rarm) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[4.235529] (rarm) StdoutLine: {'line': b'--   Found libzmq, version 4.3.5\n'}
+[4.262677] (rarm) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[4.294670] (rarm) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[4.304779] (rarm) StdoutLine: {'line': b'--   Found uuid, version 2.39.3\n'}
+[4.308195] (-) TimerEvent: {}
+[4.329107] (rarm) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[4.329577] (rarm) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[4.329788] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[4.330098] (rarm) StdoutLine: {'line': b'-- Searching for <gz-utils2> component [cli]\n'}
+[4.333087] (rarm) StdoutLine: {'line': b'-- Looking for gz-utils2-cli -- found version 2.2.1\n'}
+[4.333324] (rarm) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2-cli\n'}
+[4.334114] (rarm) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[4.408299] (-) TimerEvent: {}
+[4.489758] (rarm) StdoutLine: {'line': b'-- Found ros_gz_image: 1.0.16 (/opt/ros/jazzy/share/ros_gz_image/cmake)\n'}
+[4.492670] (rarm) StdoutLine: {'line': b'-- Found ros_gz_sim: 1.0.16 (/opt/ros/jazzy/share/ros_gz_sim/cmake)\n'}
+[4.501337] (rarm) StdoutLine: {'line': b'-- Found ros2_control: 4.39.2 (/opt/ros/jazzy/share/ros2_control/cmake)\n'}
+[4.504122] (rarm) StdoutLine: {'line': b'-- Found ros2_controllers: 4.34.0 (/opt/ros/jazzy/share/ros2_controllers/cmake)\n'}
+[4.507838] (rarm) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/jazzy/share/xacro/cmake)\n'}
+[4.508483] (rarm) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[4.508594] (-) TimerEvent: {}
+[4.574307] (rarm) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[4.574447] (rarm) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[4.574616] (rarm) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[4.574866] (rarm) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[4.575846] (rarm) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[4.576282] (rarm) StdoutLine: {'line': b'-- Configuring done (4.6s)\n'}
+[4.580631] (rarm) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[4.582946] (rarm) StdoutLine: {'line': b'-- Build files have been written to: /home/malith/rarm_ws/build/rarm\n'}
+[4.601502] (rarm) CommandEnded: {'returncode': 0}
+[4.601825] (rarm) JobProgress: {'identifier': 'rarm', 'progress': 'install'}
+[4.608079] (rarm) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/malith/rarm_ws/build/rarm'], 'cwd': '/home/malith/rarm_ws/build/rarm', 'env': OrderedDict({'PYTHON_BASIC_REPL': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/malith/rarm_ws/install/rarm/share/:/home/malith/rarm_ws/src:/home/malith/rarm_ws/install/rarm/share/:/home/malith/rarm_ws/src', 'USER': 'malith', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'GIT_ASKPASS': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/malith', 'OLDPWD': '/home/malith', 'TERM_PROGRAM_VERSION': '1.106.3', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-76f9af49-c31d-4c1c-b1e4-b713deac8c83.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/node', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/libs/debugpy', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'malith', 'NAME': 'Code', 'WSL_INTEROP': '/run/WSL/19030_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/home/malith/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/malith/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/malith/.vscode-server/bin/bf9252a2fb45be6893dd8870c0bf37e2e1766d61/bin/remote-cli:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft/Web Platform Installer/:/mnt/c/Program Files (x86)/Microsoft ASP.NET/ASP.NET Web Pages/v1.0/:/mnt/c/Program Files/Microsoft SQL Server/110/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/110/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/120/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/120/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/120/DTS/Binn/:/mnt/d/Program Files/MATLAB/R2021b/bin:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/Malith Manupriya/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Malith Manupriya/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Malith Manupriya/.dotnet/tools:/mnt/c/Users/Malith Manupriya/AppData/Local/Programs/Ollama:/snap/bin:/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/malith/.vscode-server/extensions/ms-python.debugpy-2025.16.0/.noConfigDebugAdapterEndpoints/endpoint-974068403410da13.txt', 'LANG': 'en_US.UTF-8', 'PYTHONSTARTUP': '/home/malith/.vscode-server/data/User/workspaceStorage/6d7952eb95283e2d106b8db0fa986463/ms-python.python/pythonrc.py', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-bbaad9328d.sock', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/malith/rarm_ws/build/rarm', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'ELECTRON_RUN_AS_NODE/w:'}), 'shell': False}
+[4.608816] (-) TimerEvent: {}
+[4.614410] (rarm) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.614873] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes\n'}
+[4.615149] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L2.STL\n'}
+[4.617636] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L6.STL\n'}
+[4.619002] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L1.STL:Zone.Identifier\n'}
+[4.619362] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L7.STL\n'}
+[4.619666] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/base_link.STL\n'}
+[4.625223] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L3.STL\n'}
+[4.628754] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L5.STL:Zone.Identifier\n'}
+[4.629028] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L4.STL\n'}
+[4.631181] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/base_link.STL:Zone.Identifier\n'}
+[4.631375] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L1.STL\n'}
+[4.633191] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L2.STL:Zone.Identifier\n'}
+[4.633445] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L5.STL\n'}
+[4.634092] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L3.STL:Zone.Identifier\n'}
+[4.634230] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L4.STL:Zone.Identifier\n'}
+[4.634422] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L6.STL:Zone.Identifier\n'}
+[4.634507] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L8.STL\n'}
+[4.634722] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L7.STL:Zone.Identifier\n'}
+[4.634844] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/meshes/L8.STL:Zone.Identifier\n'}
+[4.634970] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/urdf\n'}
+[4.635080] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7.urdf.xacro\n'}
+[4.635179] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/gazebo_sim_ros2_control.urdf.xacro\n'}
+[4.635305] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7_ros2_control.urdf.xacro\n'}
+[4.635419] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/urdf/GP7_Robot_A1_ZAxis_A2.urdf.xacro\n'}
+[4.635698] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/launch\n'}
+[4.635990] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/launch/GP7.gazebo.launch.py\n'}
+[4.636096] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/launch/load_ros2_controllers.launch.py\n'}
+[4.636158] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/launch/robot_state_publisher.launch.py\n'}
+[4.636259] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/rviz\n'}
+[4.636335] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/rviz/robot_config.rviz\n'}
+[4.636618] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/worlds\n'}
+[4.636686] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/worlds/empty.world\n'}
+[4.636769] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/worlds/pick_and_place_demo.world\n'}
+[4.636894] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/config\n'}
+[4.637084] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros_gz_bridge.yaml\n'}
+[4.637153] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros2_controllers_template.yaml\n'}
+[4.637213] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/config/ros2_controllers.yaml\n'}
+[4.637304] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/bring_up\n'}
+[4.637446] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/bring_up/gp7.sh\n'}
+[4.637527] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/package_run_dependencies/rarm\n'}
+[4.637724] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/parent_prefix_path/rarm\n'}
+[4.637877] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/ament_prefix_path.sh\n'}
+[4.638026] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/ament_prefix_path.dsv\n'}
+[4.638179] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/path.sh\n'}
+[4.638331] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/environment/path.dsv\n'}
+[4.638558] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.bash\n'}
+[4.638884] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.sh\n'}
+[4.638975] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.zsh\n'}
+[4.639127] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/local_setup.dsv\n'}
+[4.639244] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/package.dsv\n'}
+[4.639359] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/packages/rarm\n'}
+[4.639472] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/cmake/rarmConfig.cmake\n'}
+[4.639583] (rarm) StdoutLine: {'line': b'-- Up-to-date: /home/malith/rarm_ws/install/rarm/share/rarm/cmake/rarmConfig-version.cmake\n'}
+[4.639698] (rarm) StdoutLine: {'line': b'-- Installing: /home/malith/rarm_ws/install/rarm/share/rarm/package.xml\n'}
+[4.640502] (rarm) CommandEnded: {'returncode': 0}
+[4.653931] (rarm) JobEnded: {'identifier': 'rarm', 'rc': 0}
+[4.654884] (-) EventReactorShutdown: {}
