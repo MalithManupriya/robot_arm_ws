@@ -24,6 +24,7 @@
 /home/malith/rarm_ws/install/rarm/share/rarm/launch/load_ros2_controllers.launch.py
 /home/malith/rarm_ws/install/rarm/share/rarm/launch/robot_state_publisher.launch.py
 /home/malith/rarm_ws/install/rarm/share/rarm/rviz/robot_config.rviz
+/home/malith/rarm_ws/install/rarm/share/rarm/worlds/box.world
 /home/malith/rarm_ws/install/rarm/share/rarm/worlds/empty.world
 /home/malith/rarm_ws/install/rarm/share/rarm/worlds/pick_and_place_demo.world
 /home/malith/rarm_ws/install/rarm/share/rarm/config/ros_gz_bridge.yaml

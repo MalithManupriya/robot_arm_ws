@@ -13,7 +13,7 @@ trap 'cleanup' SIGINT SIGTERM
 echo "Launching Gazebo simulation..."
 ros2 launch rarm GP7.gazebo.launch.py \
     load_controllers:=true \
-    world_file:=empty.world \
+    world_file:=box.world \
     use_rviz:=false \
     jsp_gui:=false \
     use_robot_state_pub:=true \
