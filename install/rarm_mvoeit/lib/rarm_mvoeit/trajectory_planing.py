@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sp
 #np.set_printoptions(precision=5, suppress=True) so we can see better coment out at run
-time_step=0.01
+time_step=0.05
 def dh_matrix(a, alpha, d, theta):
     """
     Classic (standard) DH transformation matrix.
@@ -141,8 +141,8 @@ def forward_kinematics(angles,limit=100):
 # --- 3. Main Trajectory Planning and Execution ---
 def main(Q_START=np.array([0, 0, 0, 0.0, 0.0, 0.0]),Q_END=np.array([0,0.005119,-0.2218,0,0.2269190,0])):
     # 0. Define System Parameters
-    MAX_V_LINEAR = 0.2  # m/s (Maximum linear speed of the end-effector)
-    MAX_A_LINEAR = 0.2  # m/s^2 (Acceleration used for the profile)
+    MAX_V_LINEAR = 0.1  # m/s (Maximum linear speed of the end-effector)
+    MAX_A_LINEAR = 0.05  # m/s^2 (Acceleration used for the profile)
     TIME_STEP = time_step    # seconds (Control loop frequency: 100 Hz)
 
     # 1. Define Start and End Angles (must be feasible)

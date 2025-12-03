@@ -87,8 +87,9 @@ class ArmGripperLoopController(Node):
         motion.append(self.calculate_motion(point2,point3))
         motion.append(self.calculate_motion(point3,point4))
         motion.append(self.calculate_motion(point4,point5))
-        self.get_logger().info('Moving to home position')
-        self.send_arm_command(self.home_pos,5.5)
+
+        # self.get_logger().info('Moving to home position')
+        # self.send_arm_command(self.home_pos,5.5)
         # time.sleep(5) 
 
         self.get_logger().info('Opening the gripper')
@@ -100,7 +101,7 @@ class ArmGripperLoopController(Node):
         time.sleep(10)
 
         self.get_logger().info('Closing the gripper')
-        self.send_gripper_command(-0.16)  # Open the gripper
+        self.send_gripper_command(-0.1)  # Open the gripper
         time.sleep(10) 
 
 
@@ -109,11 +110,11 @@ class ArmGripperLoopController(Node):
             for theta in submotion:
                 self.get_logger().info(f'th motion ')
                 self.send_arm_command(theta)
-        time.sleep(2.5)
+            time.sleep(1)
 
-        self.get_logger().info('Opening the gripper')
-        self.send_gripper_command(-1.2)  # Open the gripper
-        time.sleep(5) 
+        # self.get_logger().info('Opening the gripper')
+        # self.send_gripper_command(-1.2)  # Open the gripper
+        # time.sleep(5) 
 
         #=========================================================#
         # Move to target position
