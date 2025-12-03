@@ -73,7 +73,7 @@ def process_ros2_controllers_config(context):
 
 # Define the arguments for the XACRO file
 ARGUMENTS = [
-    DeclareLaunchArgument('robot_name', default_value='mycobot_280',
+    DeclareLaunchArgument('robot_name', default_value='GP7',
                           description='Name of the robot'),
     DeclareLaunchArgument('prefix', default_value='',
                           description='Prefix for robot joints and links'),

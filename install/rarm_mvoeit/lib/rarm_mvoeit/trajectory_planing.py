@@ -87,6 +87,55 @@ def wrist_angles_from_R(R, eps=1e-8):
 
     return wrap(theta4), theta5, wrap(theta6)
 
+
+def wrap_continuous(a_current, a_previous):
+    """
+    Ensures the current angle (a_current) is adjusted by a multiple of 2*pi 
+    so that it is the closest possible angle to the previous angle (a_previous).
+    """
+    k = np.round((a_previous - a_current) / (2 * np.pi))
+    return a_current + 2 * np.pi * k
+
+
+def wrist_angles_from_R_trajectory(R, theta_prev_4, theta_prev_6, eps=1e-8):
+    """
+    Extract theta4, theta5, theta6 from the required wrist rotation matrix R (R_3^6).
+    
+    This version relies on continuous wrapping to stabilize the singular region,
+    rather than introducing a separate 'else' branch that often causes new discontinuities.
+    """
+    r02 = R[0, 2]
+    r12 = R[1, 2]
+    r22 = R[2, 2]
+    r20 = R[2, 0]
+    r21 = R[2, 1]
+
+    # --- 1. Solve for theta5 ---
+    sin_theta5 = np.sqrt(max(0.0, r02*r02 + r12*r12))
+    theta5 = np.arctan2(sin_theta5, r22) 
+
+    # --- 2. Solve for theta4 and theta6 (Using the General Case ONLY) ---
+    # The general formulas (which are non-unique at the singularity) are used, 
+    # but the continuous wrapper will 'fix' them to the nearest stable solution.
+    theta4 = np.arctan2(-r12, -r02)
+    theta6 = np.arctan2(-r21, r20)
+    
+    # Check for the alternate theta5 solution (theta5_alt = np.pi - theta5)
+    # The IK solver must choose the theta5 solution (primary or alternate) that 
+    # results in theta4 and theta6 being closest to their previous values.
+    # For simplicity, we stick to the primary theta5 here, but complex solvers
+    # would check both and use the continuous wrapper on both results.
+
+    # --- 3. Apply Continuous Wrapping (The Fix) ---
+    # This keeps the joint angles on a continuous path, overriding the sudden jumps
+    # produced by the unstable IK calculation near the singularity.
+    theta4 = wrap_continuous(theta4, theta_prev_4)
+    theta6 = wrap_continuous(theta6, theta_prev_6)
+
+    return theta4, theta5, theta6
+
+
+
 # --- 2. Trapezoidal Velocity Profile (LSPB) Function ---
 
 def trapezoidal_profile(time_points, total_distance, max_velocity, acceleration):
@@ -190,7 +239,7 @@ def main(Q_START=np.array([0, 0, 0, 0.0, 0.0, 0.0]),Q_END=np.array([0,0.005119,-
         
         # C. Run Inverse Kinematics (using Kinematic Decoupling logic inside IK)
         # The current_angles are passed to help the IK choose the correct elbow/wrist configuration.
-        Q_target = inverse_kinematics(T_target)
+        Q_target = inverse_kinematics_trajectory(T_target,current_angles[3],current_angles[5])
         
         # D. Store and Update
         joint_trajectory[i] = Q_target
@@ -243,6 +292,19 @@ def inverse_kinematics(T_target):
     Q_target[3], Q_target[4], Q_target[5]=wrist_angles_from_R(R36)
     H6=forward_kinematics(Q_target)#so it will be printed
     return Q_target
+
+def inverse_kinematics_trajectory(T_target,theta_pre4,theta_prev6):
+    R_fixed =T_target[0:3, 0:3] # Orientation is LOCKED to the start orientation
+    P_target=T_target[:3, 3]
+    angles23=angles2and3(T_target)
+    Q_target=np.array([np.arctan2(-P_target[1],-P_target[0]),float(angles23[0]),float(angles23[1]),0,0,0])
+    H3=forward_kinematics(Q_target,3)
+    R3=H3[0:3, 0:3]
+    R36=R3.T@R_fixed
+    Q_target[3], Q_target[4], Q_target[5]=wrist_angles_from_R_trajectory(R36,theta_pre4,theta_prev6)
+    H6=forward_kinematics(Q_target)#so it will be printed
+    return Q_target
+
 def hallo(): # Used to check whether the import works
     print("hallo")
     return 0

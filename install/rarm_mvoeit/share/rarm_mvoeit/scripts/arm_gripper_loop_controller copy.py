@@ -11,9 +11,6 @@ Action Clients:
         Commands for controlling arm joint positions
     /gripper_action_controller/gripper_cmd (control_msgs/GripperCommand):
         Commands for opening and closing the gripper
-
-:author: Addison Sears-Collins
-:date: November 15, 2024
 """
 
 import time

@@ -51,6 +51,18 @@ class ArmGripperLoopController(Node):
         4. Go to pick down location
         5. open the gripper
         """
+        pick_up_T6=np.array([
+            [1,     0,      0,       0.5    ],
+            [0,    -1,      0,      -0.5    ],
+            [0,     0,     -1,      0.05    ],
+            [0,     0,      0,         1    ]
+        ])
+        pick_down_T6=np.array([
+            [1,     0,      0,       0.3    ],
+            [0,    -1,      0,       0.4    ],
+            [0,     0,     -1,      0.25    ],
+            [0,     0,      0,         1    ]
+        ])
         point1=np.array([
             [1,     0,      0,       0.5    ],
             [0,    -1,      0,      -0.5    ],
@@ -60,6 +72,12 @@ class ArmGripperLoopController(Node):
         point2=np.array([
             [1,     0,      0,      -0.5    ],
             [0,    -1,      0,      -0.5    ],
+            [0,     0,     -1,      0.3    ],
+            [0,     0,      0,         1    ]
+        ])
+        point25=np.array([
+            [1,     0,      0,      -0.5    ],
+            [0,    -1,      0,      0    ],
             [0,     0,     -1,      0.3    ],
             [0,     0,      0,         1    ]
         ])
@@ -82,27 +100,28 @@ class ArmGripperLoopController(Node):
             [0,     0,      0,         1    ]
         ])
         motion=[]
-        motion.append(self.calculate_motion(self.pick_up_T6,point1))
-        motion.append(self.calculate_motion(point1,point2))
-        motion.append(self.calculate_motion(point2,point3))
-        motion.append(self.calculate_motion(point3,point4))
-        motion.append(self.calculate_motion(point4,point5))
+        #motion.append(self.calculate_motion(self.pick_up_T6,point1))
+        #motion.append(self.calculate_motion(point1,point2))
+        motion.append(self.calculate_motion(point2,point25))
+        motion.append(self.calculate_motion(point25,point3))
+        #motion.append(self.calculate_motion(point3,point4))
+        #motion.append(self.calculate_motion(point4,point5))
 
-        # self.get_logger().info('Moving to home position')
-        # self.send_arm_command(self.home_pos,5.5)
+        self.get_logger().info('Moving to home position')
+        self.send_arm_command(tp.inverse_kinematics(point2).tolist(),5)
+        time.sleep(10) 
+
+        # self.get_logger().info('Opening the gripper')
+        # self.send_gripper_command(-1.2)  # Open the gripper
         # time.sleep(5) 
 
-        self.get_logger().info('Opening the gripper')
-        self.send_gripper_command(-1.2)  # Open the gripper
-        time.sleep(5) 
+        # self.get_logger().info('Moving to pickup position')
+        # self.send_arm_command(self.pickup_pos,5)
+        # time.sleep(10)
 
-        self.get_logger().info('Moving to pickup position')
-        self.send_arm_command(self.pickup_pos,5)
-        time.sleep(10)
-
-        self.get_logger().info('Closing the gripper')
-        self.send_gripper_command(-0.1)  # Open the gripper
-        time.sleep(10) 
+        # self.get_logger().info('Closing the gripper')
+        # self.send_gripper_command(-0.1)  # Open the gripper
+        # time.sleep(10) 
 
 
         
@@ -112,9 +131,9 @@ class ArmGripperLoopController(Node):
                 self.send_arm_command(theta)
             time.sleep(1)
 
-        # self.get_logger().info('Opening the gripper')
-        # self.send_gripper_command(-1.2)  # Open the gripper
-        # time.sleep(5) 
+        self.get_logger().info('Opening the gripper')
+        self.send_gripper_command(-1.2)  # Open the gripper
+        time.sleep(5) 
 
         #=========================================================#
         # Move to target position
@@ -173,24 +192,6 @@ class ArmGripperLoopController(Node):
             'J4', 'J5', 'J6'
         ]
 
-        # Define target and home positions for the arm
-        self.target_pos = [np.pi/2+np.pi/4,0.9588,0.05266,-3.141592653589793,0.6646563267948965,-0.7853981633974483]
-        self.home_pos = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-        self.pick_up_T6=np.array([
-            [1,     0,      0,       0.5    ],
-            [0,    -1,      0,      -0.5    ],
-            [0,     0,     -1,      0.05    ],
-            [0,     0,      0,         1    ]
-        ])
-        self.pick_down_T6=np.array([
-            [1,     0,      0,       0.3    ],
-            [0,    -1,      0,       0.4    ],
-            [0,     0,     -1,      0.25    ],
-            [0,     0,      0,         1    ]
-        ])
-        self.pickup_pos=tp.inverse_kinematics(self.pick_up_T6).tolist()
-        #self.pickup_pos=[2.356, 0.9588, 0.05266, -3.141592653589793, 0.6646563267948964, -0.785398163397448]
-        self.pickdown_pos=tp.inverse_kinematics(self.pick_down_T6).tolist()
         #self.pickdown_pos=[0, 0, 0, -3.141592653589793,1.5707963267948966, -3.141592653589793]
         # Create timer that triggers the control loop quickly after start (0.1 seconds)
         # self.create_timer(0.1, self.control_loop_callback)
