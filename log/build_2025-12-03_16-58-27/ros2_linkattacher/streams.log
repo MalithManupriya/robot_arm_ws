@@ -1,0 +1,35 @@
+[0.497s] Invoking command in '/home/malith/rarm_ws/build/ros2_linkattacher': AMENT_PREFIX_PATH=/home/malith/rarm_ws/install/linkattacher_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/malith/rarm_ws/install/linkattacher_msgs:/home/malith/rarm_ws/install/rarm_mvoeit:/home/malith/rarm_ws/install/rarm:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/malith/rarm_ws/install/linkattacher_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/malith/rarm_ws/install/linkattacher_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/malith/rarm_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher -DCMAKE_INSTALL_PREFIX=/home/malith/rarm_ws/install/ros2_linkattacher
+[0.887s] -- The C compiler identification is GNU 13.3.0
+[2.196s] -- The CXX compiler identification is GNU 13.3.0
+[3.440s] -- Detecting C compiler ABI info
+[3.975s] -- Detecting C compiler ABI info - done
+[4.024s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.024s] -- Detecting C compile features
+[4.025s] -- Detecting C compile features - done
+[4.207s] -- Detecting CXX compiler ABI info
+[4.704s] -- Detecting CXX compiler ABI info - done
+[4.727s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[4.728s] -- Detecting CXX compile features
+[4.729s] -- Detecting CXX compile features - done
+[4.744s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.091s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[5.338s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[8.461s] [31mCMake Error at CMakeLists.txt:38 (find_package):
+[8.461s]   By not providing "Findgazebo_ros.cmake" in CMAKE_MODULE_PATH this project
+[8.461s]   has asked CMake to find a package configuration file provided by
+[8.462s]   "gazebo_ros", but CMake did not find one.
+[8.462s] 
+[8.462s]   Could not find a package configuration file provided by "gazebo_ros" with
+[8.462s]   any of the following names:
+[8.462s] 
+[8.462s]     gazebo_rosConfig.cmake
+[8.462s]     gazebo_ros-config.cmake
+[8.462s] 
+[8.462s]   Add the installation prefix of "gazebo_ros" to CMAKE_PREFIX_PATH or set
+[8.462s]   "gazebo_ros_DIR" to a directory containing one of the above files.  If
+[8.463s]   "gazebo_ros" provides a separate development package or SDK, be sure it has
+[8.463s]   been installed.
+[8.463s] 
+[8.463s] [0m
+[8.463s] -- Configuring incomplete, errors occurred!
+[8.471s] Invoked command in '/home/malith/rarm_ws/build/ros2_linkattacher' returned '1': AMENT_PREFIX_PATH=/home/malith/rarm_ws/install/linkattacher_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/malith/rarm_ws/install/linkattacher_msgs:/home/malith/rarm_ws/install/rarm_mvoeit:/home/malith/rarm_ws/install/rarm:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy LD_LIBRARY_PATH=/home/malith/rarm_ws/install/linkattacher_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/malith/rarm_ws/install/linkattacher_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/malith/rarm_ws/src/IFRA_LinkAttacher/ros2_LinkAttacher -DCMAKE_INSTALL_PREFIX=/home/malith/rarm_ws/install/ros2_linkattacher

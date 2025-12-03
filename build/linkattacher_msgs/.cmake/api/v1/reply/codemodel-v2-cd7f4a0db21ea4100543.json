@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-3a384d6cedb5c71e4549.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "linkattacher_msgs__py",
+					"jsonFile" : "directory-linkattacher_msgs__py-76c987bbed053d6022a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/malith/rarm_ws/build/linkattacher_msgs/linkattacher_msgs__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "linkattacher_msgs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_linkattacher_msgs_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_linkattacher_msgs_egg-0592c221de3ad0b7b11d.json",
+					"name" : "ament_cmake_python_build_linkattacher_msgs_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_linkattacher_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_linkattacher_msgs-16cf7bd7cadc51fcd424.json",
+					"name" : "ament_cmake_python_copy_linkattacher_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs-67fd93524c580898bed4.json",
+					"name" : "linkattacher_msgs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__cpp-457ef6052206149f55ec.json",
+					"name" : "linkattacher_msgs__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "linkattacher_msgs__py::@2cdba3e1dc23028bcc75",
+					"jsonFile" : "target-linkattacher_msgs__py-bd3d865e6d7c7bccfbad.json",
+					"name" : "linkattacher_msgs__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_generator_c-69e3831f5f357824dade.json",
+					"name" : "linkattacher_msgs__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_generator_py-3dc842d7de4deda6b7ad.json",
+					"name" : "linkattacher_msgs__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_generator_type_description-f10465737615d8bc038c.json",
+					"name" : "linkattacher_msgs__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_c-c0869cb5a069c7285a56.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_cpp-25b8232063892116b846.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_fastrtps_c-04717c78ee6dcbf6ecf2.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_fastrtps_cpp-16120eaa9c22b19962ab.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_introspection_c-c0576e2a73981abb5708.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs__rosidl_typesupport_introspection_cpp-848c575a93a376f25f54.json",
+					"name" : "linkattacher_msgs__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs_s__rosidl_typesupport_c-a92e4e055c69e446cafe.json",
+					"name" : "linkattacher_msgs_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs_s__rosidl_typesupport_fastrtps_c-5ee4d6ad8e93a541bf2b.json",
+					"name" : "linkattacher_msgs_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs_s__rosidl_typesupport_introspection_c-cab8d4fe27991d84bf8b.json",
+					"name" : "linkattacher_msgs_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linkattacher_msgs_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linkattacher_msgs_uninstall-4e225458baa99f5b981f.json",
+					"name" : "linkattacher_msgs_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-c02c6f200fbdfdf9646d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/malith/rarm_ws/build/linkattacher_msgs",
+		"source" : "/home/malith/rarm_ws/src/IFRA_LinkAttacher/linkattacher_msgs"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

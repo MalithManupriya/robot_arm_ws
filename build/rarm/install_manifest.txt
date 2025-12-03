@@ -32,6 +32,7 @@
 /home/malith/rarm_ws/install/rarm/share/rarm/config/ros2_controllers.yaml
 /home/malith/rarm_ws/install/rarm/share/rarm/bring_up/rsp.sh
 /home/malith/rarm_ws/install/rarm/share/rarm/bring_up/gp7.sh
+/home/malith/rarm_ws/install/rarm/share/rarm/bring_up/run_commnds.sh
 /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/package_run_dependencies/rarm
 /home/malith/rarm_ws/install/rarm/share/ament_index/resource_index/parent_prefix_path/rarm
 /home/malith/rarm_ws/install/rarm/share/rarm/environment/ament_prefix_path.sh

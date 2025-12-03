@@ -1,0 +1,56 @@
+[0.014s] Invoking command in '/home/malith/rarm_ws/build/rarm_mvoeit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_mvoeit -- -j8 -l8
+[0.031s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.181s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.291s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.297s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.305s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.359s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.360s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.505s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.626s] -- Found rclcpp_action: 28.1.13 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[0.654s] -- Found control_msgs: 5.5.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[0.734s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.804s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.804s] -- Configured cppcheck include dirs: 
+[0.804s] -- Configured cppcheck exclude dirs and/or files: 
+[0.804s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.804s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.804s] -- Added test 'lint_cmake' to check CMake code style
+[0.804s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.804s] -- Added test 'uncrustify' to check C / C++ code style
+[0.805s] -- Configured uncrustify additional arguments: 
+[0.805s] -- Added test 'xmllint' to check XML markup files
+[0.805s] -- Configuring done (0.8s)
+[0.816s] -- Generating done (0.0s)
+[0.819s] -- Build files have been written to: /home/malith/rarm_ws/build/rarm_mvoeit
+[0.845s] [ 50%] [32mBuilding CXX object CMakeFiles/arm_gripper_loop_controller.dir/src/arm_gripper_loop_controller.cpp.o[0m
+[4.633s] [100%] [32m[1mLinking CXX executable arm_gripper_loop_controller[0m
+[4.875s] [100%] Built target arm_gripper_loop_controller
+[4.882s] Invoked command in '/home/malith/rarm_ws/build/rarm_mvoeit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_mvoeit -- -j8 -l8
+[4.883s] Invoking command in '/home/malith/rarm_ws/build/rarm_mvoeit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_mvoeit
+[4.888s] -- Install configuration: ""
+[4.888s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts
+[4.888s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/arm_gripper_loop_controller.py:Zone.Identifier
+[4.888s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/arm_gripper_loop_controller.py
+[4.888s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/src
+[4.888s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/src/arm_gripper_loop_controller.cpp
+[4.888s] -- Installing: /home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/arm_gripper_loop_controller
+[4.889s] -- Set non-toolchain portion of runtime path of "/home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/arm_gripper_loop_controller" to ""
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/arm_gripper_loop_controller.py
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/ament_index/resource_index/package_run_dependencies/rarm_mvoeit
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/ament_index/resource_index/parent_prefix_path/rarm_mvoeit
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/environment/ament_prefix_path.sh
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/environment/ament_prefix_path.dsv
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/environment/path.sh
+[4.890s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/environment/path.dsv
+[4.891s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/local_setup.bash
+[4.891s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/local_setup.sh
+[4.891s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/local_setup.zsh
+[4.891s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/local_setup.dsv
+[4.891s] -- Installing: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/package.dsv
+[4.892s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/ament_index/resource_index/packages/rarm_mvoeit
+[4.892s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/cmake/rarm_mvoeitConfig.cmake
+[4.893s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/cmake/rarm_mvoeitConfig-version.cmake
+[4.893s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/package.xml
+[4.893s] Invoked command in '/home/malith/rarm_ws/build/rarm_mvoeit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_mvoeit

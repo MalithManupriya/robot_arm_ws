@@ -1,0 +1,4 @@
+source;share/rarm_mvoeit/local_setup.bash
+source;share/rarm_mvoeit/local_setup.dsv
+source;share/rarm_mvoeit/local_setup.sh
+source;share/rarm_mvoeit/local_setup.zsh
