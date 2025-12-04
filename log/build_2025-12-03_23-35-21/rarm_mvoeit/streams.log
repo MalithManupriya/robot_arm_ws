@@ -1,0 +1,53 @@
+[0.053s] Invoking command in '/home/malith/rarm_ws/build/rarm_mvoeit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_mvoeit -- -j8 -l8
+[0.113s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.554s] -- Found rclcpp: 28.1.13 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.952s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.973s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.005s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.035s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.168s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.172s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.810s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.397s] -- Found rclcpp_action: 28.1.13 (/opt/ros/jazzy/share/rclcpp_action/cmake)
+[2.563s] -- Found control_msgs: 5.5.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[2.863s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.050s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.050s] -- Configured cppcheck include dirs: 
+[3.050s] -- Configured cppcheck exclude dirs and/or files: 
+[3.050s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.050s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.051s] -- Added test 'lint_cmake' to check CMake code style
+[3.051s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.052s] -- Added test 'uncrustify' to check C / C++ code style
+[3.053s] -- Configured uncrustify additional arguments: 
+[3.053s] -- Added test 'xmllint' to check XML markup files
+[3.054s] -- Configuring done (3.0s)
+[3.081s] -- Generating done (0.0s)
+[3.090s] -- Build files have been written to: /home/malith/rarm_ws/build/rarm_mvoeit
+[3.182s] [100%] Built target arm_gripper_loop_controller
+[3.222s] Invoked command in '/home/malith/rarm_ws/build/rarm_mvoeit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_mvoeit -- -j8 -l8
+[3.223s] Invoking command in '/home/malith/rarm_ws/build/rarm_mvoeit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_mvoeit
+[3.236s] -- Install configuration: ""
+[3.236s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts
+[3.237s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/arm_gripper_loop_controller.py:Zone.Identifier
+[3.237s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/__pycache__
+[3.237s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/__pycache__/trajectory_planing.cpython-312.pyc
+[3.238s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/arm_gripper_loop_controller copy.py
+[3.238s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/arm_gripper_loop_controller.py
+[3.238s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/tests
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/tests/trajectory_planing_copy.py
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/tests/test_motion.py
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/test.py
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/scripts/trajectory_planing.py
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/src
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/share/rarm_mvoeit/src/arm_gripper_loop_controller.cpp
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/arm_gripper_loop_controller
+[3.239s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/arm_gripper_loop_controller.py
+[3.240s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_mvoeit/lib/rarm_mvoeit/trajectory_planing.py
+[3.240s] [31mCMake Error at cmake_install.cmake:85 (file):
+[3.240s]   file INSTALL cannot find
+[3.240s]   "/home/malith/rarm_ws/src/rarm_mvoeit/scripts/test/test_motion.py": No such
+[3.240s]   file or directory.
+[3.240s] 
+[3.240s] [0m
+[3.242s] Invoked command in '/home/malith/rarm_ws/build/rarm_mvoeit' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_mvoeit

@@ -41,9 +41,9 @@ pick_up_T6=np.array([
             [0,     0,      0,         1    ]
         ])
 motion=[]
-motion.append(calculate_motion(pick_up_T6,point1))
-motion.append(calculate_motion(point1,point2))
+# motion.append(calculate_motion(pick_up_T6,point1))
+# motion.append(calculate_motion(point1,point2))
 motion.append(calculate_motion(point2,point3))
-motion.append(calculate_motion(point3,point4))
-motion.append(calculate_motion(point4,point5))
-print(motion[0][0])
+# motion.append(calculate_motion(point3,point4))
+# motion.append(calculate_motion(point4,point5))
+# print(motion[0])

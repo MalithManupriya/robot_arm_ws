@@ -82,6 +82,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rarm_mvoeit" TYPE PROGRAM FILES "/home/malith/rarm_ws/src/rarm_mvoeit/scripts/tests/test_motion.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rarm_mvoeit" TYPE PROGRAM FILES "/home/malith/rarm_ws/src/rarm_mvoeit/scripts//tests/trajectory_planing_copy.py")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/malith/rarm_ws/build/rarm_mvoeit/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/rarm_mvoeit")
 endif()
 

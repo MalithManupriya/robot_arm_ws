@@ -38,7 +38,21 @@ class ArmGripperLoopController(Node):
     def calculate_motion(self,from_p_T,to_p_T):
         point1_pos=tp.inverse_kinematics(from_p_T).tolist()
         point2_pos=tp.inverse_kinematics(to_p_T).tolist()
+        if len(self.motion)>0:
+            print(f"motio count is {len(self.motion)}")
+            point1_pos=tp.fix_trajectory_start(point1_pos,self.motion[-1][-1])
+            #point2_pos=tp.fix_trajectory_start(point2_pos,point1_pos)
         return tp.main(point1_pos,point2_pos)
+    
+    def open_gripper(self,open=True):
+        if open:
+            self.get_logger().info('Opening the gripper')
+            self.send_gripper_command(-1.2)  # Open the gripper
+            time.sleep(5)
+        else :
+            self.get_logger().info('Closing the gripper')
+            self.send_gripper_command(-0.1)  # Close the gripper
+            time.sleep(10)
     
     def control_loop_callback(self) -> None:
         """
@@ -57,12 +71,6 @@ class ArmGripperLoopController(Node):
             [0,     0,     -1,      0.05    ],
             [0,     0,      0,         1    ]
         ])
-        pick_down_T6=np.array([
-            [1,     0,      0,       0.3    ],
-            [0,    -1,      0,       0.4    ],
-            [0,     0,     -1,      0.25    ],
-            [0,     0,      0,         1    ]
-        ])
         point1=np.array([
             [1,     0,      0,       0.5    ],
             [0,    -1,      0,      -0.5    ],
@@ -72,12 +80,6 @@ class ArmGripperLoopController(Node):
         point2=np.array([
             [1,     0,      0,      -0.5    ],
             [0,    -1,      0,      -0.5    ],
-            [0,     0,     -1,      0.3    ],
-            [0,     0,      0,         1    ]
-        ])
-        point25=np.array([
-            [1,     0,      0,      -0.5    ],
-            [0,    -1,      0,      0    ],
             [0,     0,     -1,      0.3    ],
             [0,     0,      0,         1    ]
         ])
@@ -99,62 +101,36 @@ class ArmGripperLoopController(Node):
             [0,     0,     -1,      0.25    ],
             [0,     0,      0,         1    ]
         ])
-        motion=[]
-        #motion.append(self.calculate_motion(self.pick_up_T6,point1))
-        #motion.append(self.calculate_motion(point1,point2))
-        motion.append(self.calculate_motion(point2,point25))
-        motion.append(self.calculate_motion(point25,point3))
-        #motion.append(self.calculate_motion(point3,point4))
-        #motion.append(self.calculate_motion(point4,point5))
 
-        self.get_logger().info('Moving to home position')
-        self.send_arm_command(tp.inverse_kinematics(point2).tolist(),5)
-        time.sleep(10) 
+        self.motion=[]
+        self.motion.append(self.calculate_motion(pick_up_T6,point1))
+        self.motion.append(self.calculate_motion(point1,point2))
+        self.motion.append(self.calculate_motion(point2,point3))
+        self.motion.append(self.calculate_motion(point3,point4))
+        self.motion.append(self.calculate_motion(point4,point5))
 
-        # self.get_logger().info('Opening the gripper')
-        # self.send_gripper_command(-1.2)  # Open the gripper
-        # time.sleep(5) 
+        self.open_gripper()
 
-        # self.get_logger().info('Moving to pickup position')
-        # self.send_arm_command(self.pickup_pos,5)
-        # time.sleep(10)
+        self.get_logger().info('Moving to pickup position')
+        self.send_arm_command(self.motion[0][0] ,5)
+        time.sleep(10)
 
-        # self.get_logger().info('Closing the gripper')
-        # self.send_gripper_command(-0.1)  # Open the gripper
-        # time.sleep(10) 
+        self.open_gripper(False)
 
-
-        
-        for submotion in (motion):
-            for theta in submotion:
-                self.get_logger().info(f'th motion ')
+        for i,submotion in enumerate(self.motion):
+            for j,theta in enumerate(submotion):
+                self.get_logger().info(f'{i+1}th motion {j+1}th iteration {theta}')
                 self.send_arm_command(theta)
-            time.sleep(1)
+            time.sleep(2)
 
-        self.get_logger().info('Opening the gripper')
-        self.send_gripper_command(-1.2)  # Open the gripper
-        time.sleep(5) 
+        time.sleep(1)
 
-        #=========================================================#
-        # Move to target position
-        # self.get_logger().info('Moving to home position')
-        # self.send_arm_command(self.home_pos)
-        # time.sleep(2.5)  # Wait for arm to reach target (2.5s)
+        self.open_gripper()
+        
+        self.get_logger().info('Moving to Home position')
+        self.send_arm_command([0,0,0,0,0,0] ,5)
+        time.sleep(10)
 
-        # # Pause at target position
-        # self.get_logger().info('Reached target position - Pausing')
-        # time.sleep(1.0)  # Pause for 1 second at target
-
-        # # Close gripper
-        # self.get_logger().info('Closing gripper')
-        # self.send_gripper_command(-0.7)  # Close gripper
-        # time.sleep(0.5)  # Wait for gripper to close
-        #  # Move to target position
-        # self.get_logger().info('Moving to target position')
-        # self.send_arm_command(angles[2])
-        # time.sleep(2.5)  # Wait for arm to reach target (2.5s)
-        # # Final pause before next cycle
-        # time.sleep(1.0)
     def __init__(self):
         """
         Initialize the node and set up action clients for arm and gripper control.
@@ -194,7 +170,7 @@ class ArmGripperLoopController(Node):
 
         #self.pickdown_pos=[0, 0, 0, -3.141592653589793,1.5707963267948966, -3.141592653589793]
         # Create timer that triggers the control loop quickly after start (0.1 seconds)
-        # self.create_timer(0.1, self.control_loop_callback)
+        #self.create_timer(0.1, self.control_loop_callback)
         self.control_loop_callback()
 
     def send_arm_command(self, positions: list,time_step=tp.time_step) -> None:

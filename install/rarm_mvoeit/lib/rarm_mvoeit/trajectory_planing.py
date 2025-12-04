@@ -1,8 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sp
-#np.set_printoptions(precision=5, suppress=True) so we can see better coment out at run
-time_step=0.05
+#np.set_printoptions(precision=5, suppress=True) #so we can see better coment out at run
+time_step=0.5
 def dh_matrix(a, alpha, d, theta):
     """
     Classic (standard) DH transformation matrix.
@@ -88,51 +88,7 @@ def wrist_angles_from_R(R, eps=1e-8):
     return wrap(theta4), theta5, wrap(theta6)
 
 
-def wrap_continuous(a_current, a_previous):
-    """
-    Ensures the current angle (a_current) is adjusted by a multiple of 2*pi 
-    so that it is the closest possible angle to the previous angle (a_previous).
-    """
-    k = np.round((a_previous - a_current) / (2 * np.pi))
-    return a_current + 2 * np.pi * k
 
-
-def wrist_angles_from_R_trajectory(R, theta_prev_4, theta_prev_6, eps=1e-8):
-    """
-    Extract theta4, theta5, theta6 from the required wrist rotation matrix R (R_3^6).
-    
-    This version relies on continuous wrapping to stabilize the singular region,
-    rather than introducing a separate 'else' branch that often causes new discontinuities.
-    """
-    r02 = R[0, 2]
-    r12 = R[1, 2]
-    r22 = R[2, 2]
-    r20 = R[2, 0]
-    r21 = R[2, 1]
-
-    # --- 1. Solve for theta5 ---
-    sin_theta5 = np.sqrt(max(0.0, r02*r02 + r12*r12))
-    theta5 = np.arctan2(sin_theta5, r22) 
-
-    # --- 2. Solve for theta4 and theta6 (Using the General Case ONLY) ---
-    # The general formulas (which are non-unique at the singularity) are used, 
-    # but the continuous wrapper will 'fix' them to the nearest stable solution.
-    theta4 = np.arctan2(-r12, -r02)
-    theta6 = np.arctan2(-r21, r20)
-    
-    # Check for the alternate theta5 solution (theta5_alt = np.pi - theta5)
-    # The IK solver must choose the theta5 solution (primary or alternate) that 
-    # results in theta4 and theta6 being closest to their previous values.
-    # For simplicity, we stick to the primary theta5 here, but complex solvers
-    # would check both and use the continuous wrapper on both results.
-
-    # --- 3. Apply Continuous Wrapping (The Fix) ---
-    # This keeps the joint angles on a continuous path, overriding the sudden jumps
-    # produced by the unstable IK calculation near the singularity.
-    theta4 = wrap_continuous(theta4, theta_prev_4)
-    theta6 = wrap_continuous(theta6, theta_prev_6)
-
-    return theta4, theta5, theta6
 
 
 
@@ -195,8 +151,6 @@ def main(Q_START=np.array([0, 0, 0, 0.0, 0.0, 0.0]),Q_END=np.array([0,0.005119,-
     TIME_STEP = time_step    # seconds (Control loop frequency: 100 Hz)
 
     # 1. Define Start and End Angles (must be feasible)
-    # Q_START = np.array([0, 0, 0, 0.0, 0.0, 0.0])   alredy desided
-    # Q_END = np.array([0,0.005119,-0.2218,0,0.2269190,0])
 
     # 2. Get Start/End Cartesian Poses and the FIXED Orientation
     T_start = forward_kinematics(Q_START)
@@ -220,7 +174,7 @@ def main(Q_START=np.array([0, 0, 0, 0.0, 0.0, 0.0]),Q_END=np.array([0,0.005119,-
     time_array = time_points
     # 4. Generate the Trajectory (The IK Loop)
     # Initialize storage
-    joint_trajectory = np.zeros((len(time_array)+1, 6))
+    joint_trajectory = np.zeros((len(time_array), 6))
     P_trajectory = np.zeros((len(time_array)+1, 3))
     current_angles = Q_START.copy()
 
@@ -240,13 +194,14 @@ def main(Q_START=np.array([0, 0, 0, 0.0, 0.0, 0.0]),Q_END=np.array([0,0.005119,-
         # C. Run Inverse Kinematics (using Kinematic Decoupling logic inside IK)
         # The current_angles are passed to help the IK choose the correct elbow/wrist configuration.
         Q_target = inverse_kinematics_trajectory(T_target,current_angles[3],current_angles[5])
-        
+        #Q_target = inverse_kinematics(T_target)
         # D. Store and Update
         joint_trajectory[i] = Q_target
         current_angles = Q_target
         if i % 100 == 0:
             print(f"Time: {time_array[i]:.2f}s | s: {s:.2f} | Pos: {P_target}")
-    joint_trajectory[len(time_array)]=Q_END
+    #joint_trajectory[len(time_array)]=fix_trajectory_start(Q_END,joint_trajectory[-2])
+    print(joint_trajectory)
     return joint_trajectory
 
 
@@ -281,6 +236,7 @@ def angles2and3(T_final):
     sol = sp.nsolve([eq1, eq2], [t2, t3], [0.5, 0.5])   # initial guess
     #print(sol)
     return sol
+
 def inverse_kinematics(T_target):
     R_fixed =T_target[0:3, 0:3] # Orientation is LOCKED to the start orientation
     P_target=T_target[:3, 3]
@@ -305,8 +261,62 @@ def inverse_kinematics_trajectory(T_target,theta_pre4,theta_prev6):
     H6=forward_kinematics(Q_target)#so it will be printed
     return Q_target
 
-def hallo(): # Used to check whether the import works
-    print("hallo")
+def check_imports(): # Used to check whether the import works
+    print("Imported Correctly")
     return 0
+
 if __name__=='__main__':
     main()
+
+def wrap_continuous(a_current, a_previous):
+    # This must be robust and generic for any joint
+    k = np.round((a_previous - a_current) / (2 * np.pi))
+    return a_current + 2 * np.pi * k
+
+
+def wrist_angles_from_R_trajectory(R, theta_prev_4, theta_prev_6, eps=1e-8):
+    """
+    Extract theta4, theta5, theta6 from the required wrist rotation matrix R (R_3^6).
+    
+    This version relies on continuous wrapping to stabilize the singular region,
+    rather than introducing a separate 'else' branch that often causes new discontinuities.
+    """
+    r02 = R[0, 2]
+    r12 = R[1, 2]
+    r22 = R[2, 2]
+    r20 = R[2, 0]
+    r21 = R[2, 1]
+
+    # --- 1. Solve for theta5 ---
+    sin_theta5 = np.sqrt(max(0.0, r02*r02 + r12*r12))
+    theta5 = np.arctan2(sin_theta5, r22) 
+
+   # 2. General case formulas
+    theta4_raw = np.arctan2(-r12, -r02)
+    theta6_raw = np.arctan2(-r21, r20)
+    
+    # --- 3. Apply Continuous Wrapping to both joints ---
+    
+    # This is the line that fixes the jump in Joint 4
+    theta4 = wrap_continuous(theta4_raw, theta_prev_4) 
+    
+    # This is the line that fixes the jump in Joint 6
+    theta6 = wrap_continuous(theta6_raw, theta_prev_6)
+
+    return theta4, theta5, theta6
+
+def fix_trajectory_start(Q_start_new, Q_end_previous):
+    """
+    Ensures the starting angles of the new trajectory segment are continuous 
+    with the ending angles of the previous segment.
+    """
+    # Create a copy to modify
+    Q_fixed = Q_start_new.copy()
+
+    # Apply continuity fix to Joint 4 (theta4) - Column index 3
+    Q_fixed[3] = wrap_continuous(Q_start_new[3], Q_end_previous[3])
+    
+    # Apply continuity fix to Joint 6 (theta6) - Column index 5
+    Q_fixed[5] = wrap_continuous(Q_start_new[5], Q_end_previous[5])
+    
+    return Q_fixed

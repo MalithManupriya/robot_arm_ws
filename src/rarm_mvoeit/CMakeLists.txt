@@ -28,6 +28,7 @@ install(
   DESTINATION lib/${PROJECT_NAME}
 )
 
+
 # Install Python executables
 install(PROGRAMS
   scripts/arm_gripper_loop_controller.py
@@ -35,6 +36,15 @@ install(PROGRAMS
 )
 install(PROGRAMS
   scripts/trajectory_planing.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+install(PROGRAMS
+  scripts/tests/test_motion.py
+  DESTINATION lib/${PROJECT_NAME}
+)
+install(PROGRAMS
+  scripts//tests/trajectory_planing_copy.py
   DESTINATION lib/${PROJECT_NAME}
 )
 if(BUILD_TESTING)
