@@ -443,7 +443,7 @@
         xyz="0.015494 0.057693 0"
         rpy="0 0 0" />
       <mass
-        value="0.040444" />
+        value="0.04" />
       <inertia
         ixx="5.0254E-05"
         ixy="0"
@@ -454,11 +454,12 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="-0.01 0.08 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://rarm/meshes/L7.STL" />
+        <!-- <mesh
+          filename="package://rarm/meshes/L7.STL" /> -->
+          <box size="0.06 0.140 0.06" />
       </geometry>
       <material
         name="">
@@ -468,11 +469,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="-0.01 0.08 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://rarm/meshes/L7.STL" />
+        <!-- <mesh
+          filename="package://rarm/meshes/L7.STL" /> -->
+          <box size="0.06 0.140 0.06" />
       </geometry>
 
       <xacro:friction_details/>
@@ -481,7 +483,7 @@
   </link>
   <joint
     name="J7"
-    type="revolute">
+    type="prismatic">
     <origin
       xyz="0 0.044379 0.11015"
       rpy="1.5708 0 -1.5708" />
@@ -490,9 +492,9 @@
     <child
       link="L7" />
     <axis
-      xyz="0 0 -1" />
+      xyz="1 0 0" />
     <limit
-      lower="-1.57"
+      lower="-0.05"
       upper="0"
       effort="30"
       velocity="10" />
@@ -505,7 +507,7 @@
         xyz="-0.015494 0.057693 -1.1102E-16"
         rpy="0 0 0" />
       <mass
-        value="0.040444" />
+        value="0.04" />
       <inertia
         ixx="5.0254E-05"
         ixy="5.3227E-06"
@@ -516,11 +518,12 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0 0"
+        xyz="0 0.08 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://rarm/meshes/L8.STL" />
+        <!-- <mesh
+          filename="package://rarm/meshes/L8.STL" /> -->
+          <box size="0.06 0.140 0.06" />
       </geometry>
       <material
         name="">
@@ -530,11 +533,12 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0 0"
+        xyz="0 0.08 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://rarm/meshes/L8.STL" />
+        <!-- <mesh
+          filename="package://rarm/meshes/L8.STL" /> -->
+          <box size="0.06 0.140 0.06" />
       </geometry>
       
          <xacro:friction_details/>
@@ -543,7 +547,7 @@
   </link>
   <joint
     name="J8"
-    type="revolute">
+    type="prismatic">
     <origin
       xyz="0 -0.044379 0.11015"
       rpy="1.5708 0 -1.5708" />
@@ -552,13 +556,13 @@
     <child
       link="L8" />
     <axis
-      xyz="0 0 1" />
+      xyz="1 0 0" />
     <limit
-      lower="-1.57"
-      upper="0"
+      lower="0"
+      upper="0.05"
       effort="30"
       velocity="10" />
-      <mimic joint="J7" multiplier="1.0" offset="0"/>
+       <mimic joint="J7" multiplier="-1.0" offset="0"/>
        <dynamics damping="${joint_damping}" friction="${joint_friction}"/>
   </joint>
 
