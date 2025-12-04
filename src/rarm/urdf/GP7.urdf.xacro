@@ -443,7 +443,7 @@
         xyz="0.015494 0.057693 0"
         rpy="0 0 0" />
       <mass
-        value="0.04" />
+        value="0.040444" />
       <inertia
         ixx="5.0254E-05"
         ixy="0"
@@ -454,12 +454,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="-0.01 0.08 0"
+        xyz="-0.01 0 0"
         rpy="0 0 0" />
       <geometry>
-        <!-- <mesh
-          filename="package://rarm/meshes/L7.STL" /> -->
-          <box size="0.06 0.140 0.06" />
+        <mesh
+          filename="package://rarm/meshes/L7.STL" />
       </geometry>
       <material
         name="">
@@ -469,12 +468,11 @@
     </visual>
     <collision>
       <origin
-        xyz="-0.01 0.08 0"
+        xyz="-0.01 0 0"
         rpy="0 0 0" />
       <geometry>
-        <!-- <mesh
-          filename="package://rarm/meshes/L7.STL" /> -->
-          <box size="0.06 0.140 0.06" />
+        <mesh
+          filename="package://rarm/meshes/L7.STL" />
       </geometry>
 
       <xacro:friction_details/>
@@ -507,7 +505,7 @@
         xyz="-0.015494 0.057693 -1.1102E-16"
         rpy="0 0 0" />
       <mass
-        value="0.04" />
+        value="0.040444" />
       <inertia
         ixx="5.0254E-05"
         ixy="5.3227E-06"
@@ -518,12 +516,11 @@
     </inertial>
     <visual>
       <origin
-        xyz="0 0.08 0"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <!-- <mesh
-          filename="package://rarm/meshes/L8.STL" /> -->
-          <box size="0.06 0.140 0.06" />
+        <mesh
+          filename="package://rarm/meshes/L8.STL" />
       </geometry>
       <material
         name="">
@@ -533,12 +530,11 @@
     </visual>
     <collision>
       <origin
-        xyz="0 0.08 0"
+        xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <!-- <mesh
-          filename="package://rarm/meshes/L8.STL" /> -->
-          <box size="0.06 0.140 0.06" />
+        <mesh
+          filename="package://rarm/meshes/L8.STL" />
       </geometry>
       
          <xacro:friction_details/>
