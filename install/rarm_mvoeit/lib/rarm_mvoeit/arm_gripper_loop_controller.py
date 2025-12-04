@@ -98,13 +98,13 @@ class ArmGripperLoopController(Node):
         point4=np.array([
             [1,     0,      0,      0.3    ],
             [0,    -1,      0,      0.4    ],
-            [0,     0,     -1,      0.3    ],
+            [0,     0,     -1,      0.5    ],
             [0,     0,      0,         1    ]
         ])
         point5=np.array([
             [1,     0,      0,      0.3    ],
             [0,    -1,      0,      0.4    ],
-            [0,     0,     -1,      0.24    ],
+            [0,     0,     -1,      0.25    ],
             [0,     0,      0,         1    ]
         ])
         point6=np.array([
@@ -138,7 +138,7 @@ class ArmGripperLoopController(Node):
                 self.send_arm_command(theta)
             time.sleep(2)
 
-        time.sleep(1)
+        time.sleep(3)
 
         self.open_gripper()
 
