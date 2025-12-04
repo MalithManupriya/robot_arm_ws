@@ -10,6 +10,7 @@ a myCobot robot.
 """
 
 import os
+from ament_index_python import get_package_prefix
 from launch import LaunchDescription
 from launch.actions import (
     AppendEnvironmentVariable,
@@ -43,7 +44,7 @@ def generate_launch_description():
     package_name_moveit = 'rarm'
 
     default_robot_name = 'GP7'
-    gazebo_models_path = 'models'
+    #gazebo_models_path = 'models'
     default_world_file = 'empty.world'
     gazebo_worlds_path = 'worlds'
 
@@ -56,7 +57,7 @@ def generate_launch_description():
         package=package_name_description).find(package_name_description)
     pkg_share_moveit = FindPackageShare(package=package_name_moveit).find(package_name_moveit)
 
-    gazebo_models_path = os.path.join(pkg_share_gazebo, gazebo_models_path)
+    gazebo_models_path = os.path.join(get_package_prefix(package_name_gazebo),'share')
     default_ros_gz_bridge_config_file_path = os.path.join(
         pkg_share_gazebo, ros_gz_bridge_config_file_path)
 

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sympy as sp
 #np.set_printoptions(precision=5, suppress=True) #so we can see better coment out at run
-time_step=0.5
+time_step=0.01
 def dh_matrix(a, alpha, d, theta):
     """
     Classic (standard) DH transformation matrix.

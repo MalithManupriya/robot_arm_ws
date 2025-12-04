@@ -11,9 +11,6 @@ Action Clients:
         Commands for controlling arm joint positions
     /gripper_action_controller/gripper_cmd (control_msgs/GripperCommand):
         Commands for opening and closing the gripper
-
-:author: Addison Sears-Collins
-:date: November 15, 2024
 """
 
 import time
@@ -48,11 +45,11 @@ class ArmGripperLoopController(Node):
         if open:
             self.get_logger().info('Opening the gripper')
             self.send_gripper_command(-0.05)  # Open the gripper
-            time.sleep(5)
+            time.sleep(4)
         else :
             self.get_logger().info('Closing the gripper')
-            self.send_gripper_command(-0.0)  # Close the gripper
-            time.sleep(10)
+            self.send_gripper_command(-0.01)  # Close the gripper
+            time.sleep(4)
     
     def control_loop_callback(self) -> None:
         """
@@ -74,7 +71,7 @@ class ArmGripperLoopController(Node):
         pick_up_T6_2=np.array([
             [1,     0,      0,       0.5    ],
             [0,    -1,      0,      -0.5    ],
-            [0,     0,     -1,      0.05    ],
+            [0,     0,     -1,      0.04    ],
             [0,     0,      0,         1    ]
         ])
         point1=np.array([
@@ -104,7 +101,7 @@ class ArmGripperLoopController(Node):
         point5=np.array([
             [1,     0,      0,      0.3    ],
             [0,    -1,      0,      0.4    ],
-            [0,     0,     -1,      0.25    ],
+            [0,     0,     -1,      0.24    ],
             [0,     0,      0,         1    ]
         ])
         point6=np.array([
@@ -124,8 +121,8 @@ class ArmGripperLoopController(Node):
         self.open_gripper()
 
         self.get_logger().info('Moving to pickup position')
-        self.send_arm_command(tp.inverse_kinematics(pick_up_T6_1),5)
-        time.sleep(10)
+        self.send_arm_command(tp.inverse_kinematics(pick_up_T6_1),4)
+        time.sleep(5)
         self.get_logger().info('Moving to pickup position')
         self.send_arm_command(self.motion[0][0] ,5)
         time.sleep(10)
@@ -138,10 +135,10 @@ class ArmGripperLoopController(Node):
                 self.send_arm_command(theta)
             time.sleep(2)
 
-        time.sleep(3)
+        time.sleep(5)
 
         self.open_gripper()
-
+        time.sleep(5)
         self.get_logger().info('Moving to point6 position')
         self.send_arm_command(tp.inverse_kinematics(point6),1)
         time.sleep(5)
