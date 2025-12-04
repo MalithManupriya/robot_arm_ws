@@ -131,6 +131,8 @@ class ArmGripperLoopController(Node):
         self.send_arm_command([0,0,0,0,0,0] ,5)
         time.sleep(10)
 
+        self.open_gripper(False)
+
     def __init__(self):
         """
         Initialize the node and set up action clients for arm and gripper control.
