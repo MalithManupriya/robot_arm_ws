@@ -1,8 +1,8 @@
 source install/rarm/share/rarm/bring_up/gp7.sh    - -  to open in gazebo world
 
-ros2 run rarm_mvoeit arm_gripper_loop_controller.py   -- to run the motion
+ros2 run rarm_moveit arm_gripper_loop_controller.py   -- to run the motion
 
-Change robot_arm_ws/src/rarm_mvoeit/scripts/arm_gripper_loop_controller.py to achieve your desired motion
+Change robot_arm_ws/src/rarm_moveit/scripts/arm_gripper_loop_controller.py to achieve your desired motion
 
 Here when reload=True the inverse kinematic will be calculated to given time step. If the time step is lower, it might take more time to run so i saved the data it to a file called data.npy to be reused in the next run. If that file exists it won't calculate the ik and run from the file. Therefore, if you want to make new motion only change reload=True (new motion will be created in to file data.npy) then build (using colcon build command) again change reload=False so that it will keep running from file without taking much time.
 

@@ -1,0 +1,41 @@
+[0.015s] Invoking command in '/home/malith/rarm_ws/build/rarm_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_moveit -- -j8 -l8
+[0.069s] [100%] Built target arm_gripper_loop_controller
+[0.082s] Invoked command in '/home/malith/rarm_ws/build/rarm_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_moveit -- -j8 -l8
+[0.082s] Invoking command in '/home/malith/rarm_ws/build/rarm_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_moveit
+[0.089s] -- Install configuration: ""
+[0.089s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts
+[0.090s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/arm_gripper_loop_controller.py:Zone.Identifier
+[0.090s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/__pycache__
+[0.090s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/__pycache__/trajectory_planing.cpython-312.pyc
+[0.090s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/arm_gripper_loop_controller.py
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests/__pycache__
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests/__pycache__/trajectory_planing_copy.cpython-312.pyc
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests/trajectory_planing_copy.py
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests/test_motion.py
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/tests/test.py
+[0.091s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/scripts/trajectory_planing.py
+[0.092s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/src
+[0.092s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/src/arm_gripper_loop_controller.cpp
+[0.092s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/data
+[0.092s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/lib/rarm_moveit/arm_gripper_loop_controller
+[0.092s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/lib/rarm_moveit/arm_gripper_loop_controller.py
+[0.093s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/lib/rarm_moveit/trajectory_planing.py
+[0.093s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/lib/rarm_moveit/test_motion.py
+[0.093s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/lib/rarm_moveit/trajectory_planing_copy.py
+[0.093s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/ament_index/resource_index/package_run_dependencies/rarm_moveit
+[0.094s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/ament_index/resource_index/parent_prefix_path/rarm_moveit
+[0.095s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/environment/ament_prefix_path.sh
+[0.096s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/environment/ament_prefix_path.dsv
+[0.097s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/environment/path.sh
+[0.097s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/environment/path.dsv
+[0.097s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/local_setup.bash
+[0.098s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/local_setup.sh
+[0.098s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/local_setup.zsh
+[0.098s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/local_setup.dsv
+[0.098s] -- Installing: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/package.dsv
+[0.099s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/ament_index/resource_index/packages/rarm_moveit
+[0.100s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/cmake/rarm_moveitConfig.cmake
+[0.101s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/cmake/rarm_moveitConfig-version.cmake
+[0.101s] -- Up-to-date: /home/malith/rarm_ws/install/rarm_moveit/share/rarm_moveit/package.xml
+[0.101s] Invoked command in '/home/malith/rarm_ws/build/rarm_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_moveit

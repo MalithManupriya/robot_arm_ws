@@ -1,0 +1,6 @@
+source;share/rarm_moveit/hook/cmake_prefix_path.dsv
+source;share/rarm_moveit/hook/cmake_prefix_path.sh
+source;share/rarm_moveit/local_setup.bash
+source;share/rarm_moveit/local_setup.dsv
+source;share/rarm_moveit/local_setup.sh
+source;share/rarm_moveit/local_setup.zsh

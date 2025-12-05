@@ -1,0 +1,4 @@
+Invoking command in '/home/malith/rarm_ws/build/rarm_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_moveit -- -j8 -l8
+Invoked command in '/home/malith/rarm_ws/build/rarm_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/malith/rarm_ws/build/rarm_moveit -- -j8 -l8
+Invoking command in '/home/malith/rarm_ws/build/rarm_moveit': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_moveit
+Invoked command in '/home/malith/rarm_ws/build/rarm_moveit' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/malith/rarm_ws/build/rarm_moveit
