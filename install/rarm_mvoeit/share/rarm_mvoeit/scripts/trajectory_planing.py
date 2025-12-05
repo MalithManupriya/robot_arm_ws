@@ -219,6 +219,28 @@ def main(Q_START=np.array([0, 0, 0, 0, 0, 0]),
             print(f"Time: {time_points[i]:.2f}s | s: {s:.2f} | Pos: {P_target}")
 
     print(joint_trajectory)
+    # --- 5. Visualization (Optional) ---
+
+    # Plot joint trajectories
+    plt.figure(figsize=(10, 6))
+    plt.title("Joint Trajectories with Constant Orientation Planning")
+    plt.plot(time_points, joint_trajectory)
+    plt.xlabel("Time (s)")
+    plt.ylabel("Joint Angle (radians)")
+    plt.grid(True)
+    plt.legend([f'Joint {i+1}' for i in range(6)])
+    plt.tight_layout()
+    plt.show()
+
+    # Plot the s(t) trapezoidal velocity profile
+    plt.figure(figsize=(10, 4))
+    plt.plot(time_points, s_t, label='s(t) - Path Ratio')
+    plt.title("Trapezoidal Velocity Profile (s vs t)")
+    plt.xlabel("Time (s)")
+    plt.ylabel("Path Ratio (s)")
+    plt.grid(True)
+    plt.show()
+
     return joint_trajectory
 
 # --------------------- Check Imports ---------------------

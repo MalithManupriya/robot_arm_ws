@@ -2,8 +2,7 @@
 """
 Control robot arm and gripper to perform repetitive movements between positions.
 
-This script creates a ROS 2 node that moves a robot arm between target and home positions,
-coordinating with gripper actions (open/close) at each position.
+This script creates a ROS 2 node that moves a robot arm between target and home positions.
 """
 
 import os
