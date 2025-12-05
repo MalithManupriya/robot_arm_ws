@@ -6,8 +6,6 @@ This launch file sets up the complete visualization environment for the mycobot 
 including robot state publisher, joint state publisher, and RViz2. It handles loading
 and processing of URDF/XACRO files and controller configurations.
 
-:author: Addison Sears-Collins
-:date: November 15, 2024
 """
 import os
 from pathlib import Path

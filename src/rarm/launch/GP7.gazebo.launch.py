@@ -2,11 +2,6 @@
 """
 Launch Gazebo simulation with a robot.
 
-This launch file sets up a complete ROS 2 simulation environment with Gazebo for
-a myCobot robot.
-
-:author: Addison Sears-Collins
-:date: November 16, 2024
 """
 
 import os
