@@ -32,3 +32,25 @@ Motion 5
 <img width="1000" height="600" alt="Figure_1 m5" src="https://github.com/user-attachments/assets/66530c01-c1ed-498e-8dd7-6ff937ef1362" />
 <img width="1000" height="400" alt="Figure_2 m5" src="https://github.com/user-attachments/assets/fff4b724-f107-4e92-bd69-479903706f27" />
 
+Useful commands:
+
+    To move the arm:
+
+ros2 topic pub --once /arm_controller/joint_trajectory trajectory_msgs/msg/JointTrajectory "{joint_names: ['J1', 'J2', 'J3', 'J4', 'J5', 'J6'], points: [{positions: [1.345, 1.15, 2.5, 2.5, 1.5, 2.5], time_from_start: {sec: 5.0, nanosec: 0}}]}"
+
+ros2 action send_goal /arm_controller/follow_joint_trajectory control_msgs/action/FollowJointTrajectory "{
+  trajectory: {
+    joint_names: ['J1', 'J2', 'J3', 'J4', 'J5', 'J6'],
+    points: [{
+      positions: [0, 0, 0, 0, 0, 0],
+      velocities: [],
+      accelerations: [],
+      effort: [],
+      time_from_start: {sec: 3, nanosec: 0}
+    }]
+  }
+}"
+
+ To move the gripper:
+ 
+ros2 action send_goal /gripper_action_controller/gripper_cmd control_msgs/action/GripperCommand "{command: {position: 0, max_effort: 5.0}}"
