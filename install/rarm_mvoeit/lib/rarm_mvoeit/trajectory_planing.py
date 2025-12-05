@@ -185,7 +185,7 @@ def fix_trajectory_start(Q_start_new, Q_end_previous):
 
 # --------------------- Main Trajectory Function ---------------------
 def main(Q_START=np.array([0, 0, 0, 0, 0, 0]), 
-         Q_END=np.array([0, 0.005119, -0.2218, 0, 0.226919, 0])):
+         Q_END=np.array([0, 0.005119, -0.2218, 0, 0.226919, 0]),need_plots=False):
     """
     Main function to generate joint trajectories with fixed orientation.
     """
@@ -219,6 +219,11 @@ def main(Q_START=np.array([0, 0, 0, 0, 0, 0]),
             print(f"Time: {time_points[i]:.2f}s | s: {s:.2f} | Pos: {P_target}")
 
     print(joint_trajectory)
+    if need_plots:
+        plots(joint_trajectory,time_points,s_t)
+    return joint_trajectory
+
+def plots(joint_trajectory,time_points,s_t):
     # --- 5. Visualization (Optional) ---
 
     # Plot joint trajectories
@@ -240,8 +245,6 @@ def main(Q_START=np.array([0, 0, 0, 0, 0, 0]),
     plt.ylabel("Path Ratio (s)")
     plt.grid(True)
     plt.show()
-
-    return joint_trajectory
 
 # --------------------- Check Imports ---------------------
 def check_imports():

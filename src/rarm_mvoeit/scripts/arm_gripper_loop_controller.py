@@ -129,7 +129,7 @@ class ArmGripperLoopController(Node):
             self.get_logger().info(f"Motion count: {len(self.motion)}")
             point1_pos = tp.fix_trajectory_start(point1_pos, self.motion[-1][-1])
 
-        return tp.main(point1_pos, point2_pos).tolist()
+        return tp.main(point1_pos, point2_pos,need_plots=False).tolist()
 
     # ----------------- Gripper Control -----------------
     def open_gripper(self, open=True):
