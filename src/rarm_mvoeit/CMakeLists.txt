@@ -17,7 +17,7 @@ ament_target_dependencies(arm_gripper_loop_controller rclcpp rclcpp_action contr
 
 # Copy necessary files to designated locations in the project
 install (
-  DIRECTORY scripts src
+  DIRECTORY scripts src data
   DESTINATION share/${PROJECT_NAME}
 )
 

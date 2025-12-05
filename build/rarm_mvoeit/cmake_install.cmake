@@ -46,6 +46,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rarm_mvoeit" TYPE DIRECTORY FILES
     "/home/malith/rarm_ws/src/rarm_mvoeit/scripts"
     "/home/malith/rarm_ws/src/rarm_mvoeit/src"
+    "/home/malith/rarm_ws/src/rarm_mvoeit/data"
     )
 endif()
 
